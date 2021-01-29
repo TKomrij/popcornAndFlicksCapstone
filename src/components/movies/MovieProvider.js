@@ -16,7 +16,7 @@ export const MovieProvider = (props) => {
     }
 
     const getMovieById = (id) => {
-        return fetch(`https://api.themoviedb.org/3/trending/movie/week/${id}?api_key=ec184360c1a6b89d3c57e88523457d51&language=en-US`)
+        return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=ec184360c1a6b89d3c57e88523457d51&language=en-US`)
             .then(res => res.json())
     }
 
