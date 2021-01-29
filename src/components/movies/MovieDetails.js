@@ -6,7 +6,7 @@ import "./Movie.css"
 export const MovieDetail = () => {
   const { getMovieById } = useContext(MovieContext)
 
-	const [movie, setMovie] = useState({})
+  const [movie, setMovie] = useState({})
 
     const { movieId } = useParams();
 
@@ -24,7 +24,7 @@ export const MovieDetail = () => {
 
   return (
     <section className="movieDetails">
-      <img className="movieDetails__poster" src= {"https://image.tmdb.org/t/p/w500/" + movie.poster_path} width="300" height="400"/>
+      <img className="movieDetails__poster" src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} width="300" height="400"/>
       <div className="movieDtailes__title">{movie.title}</div>
       <h3 className="movieDetails__overview">{movie.overview}</h3>
       <h3 className="movieDetails__overview">{movie.genre_ids}</h3>
