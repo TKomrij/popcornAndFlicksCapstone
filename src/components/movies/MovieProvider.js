@@ -8,11 +8,16 @@ export const MovieProvider = (props) => {
     const [movies, setMovies] = useState([])
 
     const getMovies = () => {
-        return fetch("https://api.themoviedb.org/3/movie/popular?api_key=ec184360c1a6b89d3c57e88523457d51")
+        return fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=ec184360c1a6b89d3c57e88523457d51&language=en-US")
         .then(res => res.json())
         .then((movieObj) => {
           setMovies(movieObj.results)
         })
+    }
+
+    const getMovieById = (id) => {
+        return fetch(`https://api.themoviedb.org/3/trending/movie/week/${id}?api_key=ec184360c1a6b89d3c57e88523457d51&language=en-US`)
+            .then(res => res.json())
     }
 
     /*
@@ -23,7 +28,7 @@ export const MovieProvider = (props) => {
     */
     return (
         <MovieContext.Provider value={{
-            movies, getMovies
+            movies, getMovies, getMovieById
         }}>
             {props.children}
         </MovieContext.Provider>
