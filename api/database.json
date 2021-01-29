@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "email": "tkomrij@gmail.com",
+      "name": "Tatiane Komrij",
+      "id": 1
+    }
+  ],
+  "notes": [],
+  "movies": [],
+  "watchLaterMovies": [],
+  "favoriteMovies": []
+}
