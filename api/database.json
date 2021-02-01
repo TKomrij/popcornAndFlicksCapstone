@@ -1,13 +1,43 @@
 {
   "users": [
     {
+      "id": 1,
       "email": "tkomrij@gmail.com",
-      "name": "Tatiane Komrij",
-      "id": 1
+      "name": "Tatiane Komrij"
     }
   ],
-  "notes": [],
-  "movies": [],
-  "watchLaterMovies": [],
-  "favoriteMovies": []
+  "notes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "movieId": 1,
+      "note": "Wow, this movie was fantastic! Gal Gadot is cracked!"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "userId": 1,
+      "apiId": 464052
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "apiId": 775996
+    }
+  ],
+  "watchLaterMovies": [
+    {
+      "id": 1,
+      "movieId": 2,
+      "userId": 1
+    }
+  ],
+  "favoriteMovies": [
+    {
+      "id": 1,
+      "movieId": 1,
+      "userId": 1
+    }
+  ]
 }

@@ -1,0 +1,61 @@
+.movieDetails__poster__title__overview {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.397);
+  height: 600px;
+}
+
+.movieDetails__poster {
+  margin: auto 0;
+  width: 400px;
+  height: 550px;
+  border-radius: 10px;
+  box-shadow: 8px 10px 20px #585858;
+}
+
+.movieDetails__title__overview__save {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+  flex-basis: 40%;
+  line-height: 30px;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.movieDetails__title {
+  text-align: center;
+  margin-bottom: 0;
+  
+}
+
+.movieDetails__release_date {
+  text-align: center;
+  margin-top: 0;
+}
+
+.movieDetails__save {
+  width: auto;
+  height: 5%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 3px 4px 8px  #585858;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+  border-style: none;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.movieDetails__back {
+  width: auto;
+  height: 5%;
+  border-radius: 5px;
+  box-shadow: 3px 4px 8px  #585858;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 25px;
+}
