@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect} from "react-router-dom";
 import { ApplicationViews } from "../ApplicationViews";
-// import { NavBar } from "./nav/NavBar";
+import { Header } from "./header/Header"
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import "./Flick.css";
@@ -13,7 +13,7 @@ export const Flick = () => (
           if (localStorage.getItem("flicks_user")) {
             return (
               <>
-                {/* <NavBar /> */}
+                <Header />
                 <ApplicationViews />
               </>
             );
