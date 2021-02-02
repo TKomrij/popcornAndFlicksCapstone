@@ -1,30 +1,33 @@
 import React, { useContext, useEffect, useState } from "react"
-import { Link, Route } from "react-router-dom"
-import { useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { MovieContext } from "./MovieProvider"
 import { NoteList } from "../notes/NoteList"
 import { useParams } from 'react-router-dom';
-import { NoteProvider } from '../notes/NoteProvider'
+import { NoteProvider } from "../notes/NoteProvider"
 import { NoteForm } from "../notes/NoteForm"
+import { NoteContext } from "../notes/NoteProvider"
 import { UserProvider } from "../users/UserProvider"
 import "./Details.css"
 
 export const MovieDetail = () => {
   const { getMovieById } = useContext(MovieContext)
   const [movie, setMovie] = useState({})
-  const history = useHistory()
+ 
   const { movieId } = useParams();
+  const { notes, getNotes } = useContext(NoteContext)
 
   useEffect(() => {
     console.log("useEffect", movieId)
     getMovieById(movieId)
     .then((response) => {
       setMovie(response)
+      getNotes()
     })
     }, [])
 
+
     
-   
+
   return (
     <>
     <section className="movieDetails">
@@ -44,16 +47,10 @@ export const MovieDetail = () => {
       </div>
     </section>
     <section>
-      <UserProvider>
-        <NoteProvider>
-          <NoteForm />
-        </NoteProvider>
-      </UserProvider>
+      <NoteForm movieId={movie.id} />
     </section>
     <section>
-        <NoteProvider>
-          <NoteList />
-        </NoteProvider>
+      <NoteList notes={notes} />
     </section>
     </>
   )

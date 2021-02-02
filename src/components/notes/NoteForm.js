@@ -6,7 +6,7 @@ import {UserContext } from "../users/UserProvider"
 import "./Note.css"
 
 
-export const NoteForm = () => {
+export const NoteForm = ({apiId}) => {
     const { addNote, getNoteById, updateNote } = useContext(NoteContext)
     const { getMovies } = useContext(MovieContext)
     const { getUsers } = useContext(UserContext)
@@ -53,17 +53,16 @@ export const NoteForm = () => {
             updateNote({
                 id: note.id,
                 note: note.note,
-                movieId: parseInt(movie.id),
+                apiId: parseInt(apiId),
                 userId: parseInt(user.id)
             })
-            .then(() => history.push(`/movies/detail/:movieId(\d+)`))
+            // .then(() => history.push(`/movies/detail/:movieId(\d+)`))
           }else {
             addNote({
                 note: note.note,
-                movieId: parseInt(movie.id),
+                apiId: parseInt(apiId),
                 userId: parseInt(user.id)
             })
-            .then(() => history.push(`/movies/detail/:movieId(\d+)`))
           }
         }
       }
@@ -102,7 +101,7 @@ export const NoteForm = () => {
               event.preventDefault() // Prevent browser from submitting the form and refreshing the page
               handleSaveNote()
             }}>
-          {noteId ? "Save Note" : "Add Note"}</button>
+          {noteId ? "Edit Note" : "Add Note"}</button>
         </form>
       )
   }
