@@ -8,7 +8,7 @@ export const NoteProvider = (props) => {
     const [notes, setNotes] = useState([])
 
     const getNotes = () => {
-        return fetch("http://localhost:8088/notes?_expand=user")
+        return fetch("http://localhost:8088/notes?_expand=movie&_expand=user")
         .then(res => res.json())
         .then(setNotes)
     }

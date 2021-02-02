@@ -5,7 +5,6 @@ import { NoteCard } from "./NoteCard"
 import "./Note.css"
 
 export const NoteList = () => {
-  // This state changes when `getAnimals()` is invoked below
   const { notes, getNotes } = useContext(NoteContext)
   const history = useHistory()
 
@@ -20,9 +19,6 @@ export const NoteList = () => {
   return (
     <div className="notes">
       {console.log("NoteList: Render", notes)}
-      <button onClick={() => {history.push("/notes/create")}}>
-            Add note
-      </button>
       {
         notes.map(note => {
           return <NoteCard key={note.id} note={note} />

@@ -1,8 +1,12 @@
 import React, { useContext, useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, Route } from "react-router-dom"
 import { useHistory } from "react-router-dom"
 import { MovieContext } from "./MovieProvider"
+import { NoteList } from "../notes/NoteList"
 import { useParams } from 'react-router-dom';
+import { NoteProvider } from '../notes/NoteProvider'
+import { NoteForm } from "../notes/NoteForm"
+import { UserProvider } from "../users/UserProvider"
 import "./Details.css"
 
 export const MovieDetail = () => {
@@ -22,10 +26,11 @@ export const MovieDetail = () => {
     
    
   return (
+    <>
     <section className="movieDetails">
       <div className="movieDetails__poster__title__overview">
         <Link className="movieDetails__back__link "to={`/`}><button className="movieDetails__back">Back</button></Link>
-        <img className="movieDetails__poster" src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt="movie posters"/>
+        <img className="movieDetails__poster" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt="movie posters"/>
         <div className="movieDetails__title__overview__save">
           <h2 className="movieDetails__title">{movie.title}</h2>
           <p className="movieDetails__release_date">{movie.release_date}</p>
@@ -38,5 +43,18 @@ export const MovieDetail = () => {
         </div>
       </div>
     </section>
+    <section>
+      <UserProvider>
+        <NoteProvider>
+          <NoteForm />
+        </NoteProvider>
+      </UserProvider>
+    </section>
+    <section>
+        <NoteProvider>
+          <NoteList />
+        </NoteProvider>
+    </section>
+    </>
   )
 }
