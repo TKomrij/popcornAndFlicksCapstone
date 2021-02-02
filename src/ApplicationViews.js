@@ -3,8 +3,8 @@ import { Route } from "react-router-dom"
 import { MovieList} from "./components/movies/MovieList"
 import { MovieProvider } from "./components/movies/MovieProvider"
 import { MovieDetail } from "./components/movies/MovieDetails"
-import { NoteList } from "./components/notes/NoteList"
 import { NoteProvider } from "./components/notes/NoteProvider"
+import { UserProvider } from "./components/users/UserProvider"
 import { NoteForm } from "./components/notes/NoteForm"
 import "./Application.css"
 
@@ -13,7 +13,7 @@ export const ApplicationViews = () => {
       <>
         <MovieProvider>
             <Route exact path="/">
-                <h1 className="movies__header">Movies</h1>
+                <h1 className="movies__header">Popular Movies This Week</h1>
                 <MovieList/>
             </Route>
 
@@ -22,18 +22,7 @@ export const ApplicationViews = () => {
             </Route>
         </MovieProvider>
 
-        <MovieProvider> 
-            <NoteProvider>
-                <Route path="/notes/create">
-                    <NoteForm />
-                </Route>
-
-                <Route path="/movies/detail/:movieId(\d+)">
-                    <NoteList/>
-                </Route>
-
-            </NoteProvider>
-        </MovieProvider>
+       
       </>
   )
 }
