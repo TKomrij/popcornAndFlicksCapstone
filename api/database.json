@@ -4,6 +4,11 @@
       "id": 1,
       "email": "tkomrij@gmail.com",
       "name": "Tatiane Komrij"
+    },
+    {
+      "id": 2,
+      "email": "aparvin@gmail.com",
+      "name": "Austin Parvin"
     }
   ],
   "notes": [
@@ -14,29 +19,35 @@
       "id": 2
     },
     {
-      "note": "Wow this movie  is great!",
+      "note": "Wow this movie is great!",
       "apiId": 464052,
       "userId": 1,
       "id": 3
     },
     {
-      "note": "woah",
-      "apiId": 464052,
-      "userId": 0,
+      "note": "What a weird movie. I don't think this is for kids.",
+      "apiId": 508442,
+      "userId": 1,
       "id": 4
+    },
+    {
+      "note": "Bye Bye Tony Stark.",
+      "apiId": 299534,
+      "userId": 1,
+      "id": 5
     }
   ],
-  "watchLaterMovies": [
+  "watchLaters": [
     {
       "id": 1,
       "apiId": 464052,
       "userId": 1
     }
   ],
-  "favoriteMovies": [
+  "favorites": [
     {
       "id": 1,
-      "apiId": 464052,
+      "apiId": 602269,
       "userId": 1
     }
   ]

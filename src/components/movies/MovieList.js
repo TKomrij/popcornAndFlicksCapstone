@@ -18,7 +18,7 @@ export const MovieList = () => {
       {console.log("MovieList: Render", movies)}
       {
         movies.map(movie => {
-          return <MovieCard key={movie.apiId} movie={movie} />
+          return <MovieCard key={movie.id} movie={movie} />
         })
       }
     </div>

@@ -6,7 +6,7 @@ import {UserContext } from "../users/UserProvider"
 import "./Note.css"
 
 
-export const NoteForm = ({apiId}) => {
+export const NoteForm = ({apiId, user}) => {
     const { addNote, getNoteById, updateNote } = useContext(NoteContext)
     const { getMovies } = useContext(MovieContext)
     const { getUsers } = useContext(UserContext)
@@ -18,14 +18,14 @@ export const NoteForm = ({apiId}) => {
     */
 
   //  const [user] = useState({
-  //   id: 0
+  //   id: `${users}`
   // })
   //   const [movie] = useState({
   //     id: `${apiId}`
   //   })
     const [note, setNote] = useState({
       note: "",
-      userId: 0,
+      userId: `${user}`,
       apiId: `${apiId}`
     });
 

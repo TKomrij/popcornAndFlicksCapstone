@@ -8,9 +8,18 @@ export const NoteProvider = (props) => {
     const [notes, setNotes] = useState([])
 
     const getNotes = () => {
-        return fetch("http://localhost:8088/notes?_expand=movie&_expand=user")
+        return fetch("http://localhost:8088/notes")
         .then(res => res.json())
         .then(setNotes)
+    }
+
+    const getNotesByMovieId = (apiId) => {
+        return fetch("http://localhost:8088/notes")
+        .then(res => res.json())
+        .then(res => { 
+           const filteredNotes = res.filter(note => note.apiId === parseInt(apiId))
+           setNotes(filteredNotes)
+        })
     }
 
     const addNote = noteObj => {
@@ -50,7 +59,7 @@ export const NoteProvider = (props) => {
     
     return (
         <NoteContext.Provider value={{
-            notes, getNotes, addNote, getNoteById, updateNote, deleteNote
+            notes, getNotes, getNotesByMovieId, addNote, getNoteById, updateNote, deleteNote
         }}>
             {props.children}
         </NoteContext.Provider>
