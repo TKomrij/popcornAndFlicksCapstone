@@ -3,32 +3,23 @@ import { Link } from "react-router-dom"
 import { MovieContext } from "./MovieProvider"
 import { NoteList } from "../notes/NoteList"
 import { useParams } from 'react-router-dom';
-import { NoteForm } from "../notes/NoteForm"
 import { NoteContext } from "../notes/NoteProvider"
-import "./Details.css"
+import { FavoriteList } from "./favorites/FavoriteList";
 
 
-export const MovieDetail = () => {
+export const Saved = () => {
   const { getMovieById } = useContext(MovieContext)
-  const { movieId } = useParams();
   const [movie, setMovie] = useState({})
-
-  // const { getUserById } = useContext(UserContext)
-  // const { userId } = useParams();
  
-  let { notes, getNotesByMovieId } = useContext(NoteContext)
+  const { movieId } = useParams();
+  const { notes, getNotes } = useContext(NoteContext)
 
   useEffect(() => {
     console.log("useEffect", movieId)
     getMovieById(movieId)
     .then((response) => {
-      setMovie(response) 
-    })
-    .then(() => {
-      return getNotesByMovieId(movieId)
-    })
-    .then(() => {
-      console.log("matchingNotes", notes)
+      setMovie(response)
+      getNotes()
     })
     }, [])
 
@@ -37,7 +28,7 @@ export const MovieDetail = () => {
 
   return (
     <>
-    <section className="movieDetails">
+    <section className="movieFavorites">
       <div className="movieDetails__poster__title__overview">
         <Link className="movieDetails__back__link "to={`/`}><button className="movieDetails__back">Back</button></Link>
         <img className="movieDetails__poster" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt="movie posters"/>
@@ -45,19 +36,17 @@ export const MovieDetail = () => {
           <h2 className="movieDetails__title">{movie.title}</h2>
           <p className="movieDetails__release_date">{movie.release_date}</p>
           <p className="movieDetails__overview">{movie.overview}</p>
-          <select className="movieDetails__save" name="saveToFavoritesOrWatchLater" id="saveToFavoritesOrWatchLater">
-            <option value="0">Save to...</option>
-            <option value="Favorites">Favorites</option>
-            <option value="WatchLater">Watch Later</option>
-          </select>
+         
         </div>
       </div>
     </section>
     <section>
-      <NoteForm apiId={movieId} />
+      <FavoriteList />
+      <NoteList />
     </section>
     <section>
-      <NoteList notes={notes} />
+      <WatchLaterList />
+      <NoteList />
     </section>
     </>
   )
