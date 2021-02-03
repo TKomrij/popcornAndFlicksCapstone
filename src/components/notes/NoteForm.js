@@ -17,14 +17,16 @@ export const NoteForm = ({apiId}) => {
     Define the intial state of the form inputs with useState()
     */
 
-   const [user] = useState({
-    id: 0
-  })
-    const [movie] = useState({
-      id: 0
-    })
+  //  const [user] = useState({
+  //   id: 0
+  // })
+  //   const [movie] = useState({
+  //     id: `${apiId}`
+  //   })
     const [note, setNote] = useState({
-      note: ""
+      note: "",
+      userId: 0,
+      apiId: `${apiId}`
     });
 
     const history = useHistory();
@@ -53,15 +55,14 @@ export const NoteForm = ({apiId}) => {
             updateNote({
                 id: note.id,
                 note: note.note,
-                apiId: parseInt(apiId),
-                userId: parseInt(user.id)
+                apiId: parseInt(`${note.apiId}`),
+                userId: parseInt(note.userId)
             })
-            // .then(() => history.push(`/movies/detail/:movieId(\d+)`))
           }else {
             addNote({
                 note: note.note,
-                apiId: parseInt(apiId),
-                userId: parseInt(user.id)
+                apiId: parseInt(`${note.apiId}`),
+                userId: parseInt(note.userId)
             })
           }
         }

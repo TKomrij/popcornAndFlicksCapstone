@@ -3,10 +3,8 @@ import { Link } from "react-router-dom"
 import { MovieContext } from "./MovieProvider"
 import { NoteList } from "../notes/NoteList"
 import { useParams } from 'react-router-dom';
-import { NoteProvider } from "../notes/NoteProvider"
 import { NoteForm } from "../notes/NoteForm"
 import { NoteContext } from "../notes/NoteProvider"
-import { UserProvider } from "../users/UserProvider"
 import "./Details.css"
 
 export const MovieDetail = () => {
@@ -47,7 +45,7 @@ export const MovieDetail = () => {
       </div>
     </section>
     <section>
-      <NoteForm movieId={movie.id} />
+      <NoteForm apiId={movieId} />
     </section>
     <section>
       <NoteList notes={notes} />
