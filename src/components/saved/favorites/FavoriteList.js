@@ -8,14 +8,11 @@ export const FavoriteList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("FavoriteList: useEffect - getFavorites")
     getFavorites()
-  
   }, [])
 
   return (
     <div className="movies favorites">
-      {console.log("FavoriteList: Render", favorites)}
       {
         favorites.map(favorite => {
           return <FavoriteCard key={favorite.id} favorite={favorite} />

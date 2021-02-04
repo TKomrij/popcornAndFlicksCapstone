@@ -8,14 +8,12 @@ export const WatchLaterList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("WatchLaterList: useEffect - getWatchLaters")
     getWatchLaters()
   
   }, [])
 
   return (
     <div className="movies watchLaters">
-      {console.log("WatchLaterList: Render", watchLaters)}
       {
         watchLaters.map(watchLater => {
           return <WatchLaterCard key={watchLater.id} watchLater={watchLater} />

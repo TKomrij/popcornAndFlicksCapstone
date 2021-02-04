@@ -2,14 +2,13 @@ import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from 'react-router-dom';
 import { NoteContext } from "./NoteProvider"
 import { MovieContext } from "../movies/MovieProvider"
-import {UserContext } from "../users/UserProvider"
 import "./Note.css"
 
 
-export const NoteForm = ({apiId, user}) => {
+export const NoteForm = ({apiId}) => {
     const { addNote, getNoteById, updateNote } = useContext(NoteContext)
     const { getMovies } = useContext(MovieContext)
-    const { getUsers } = useContext(UserContext)
+    const currentUser = parseInt(localStorage.getItem("flicks_user"))
 
     /*
     With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props.
@@ -17,15 +16,10 @@ export const NoteForm = ({apiId, user}) => {
     Define the intial state of the form inputs with useState()
     */
 
-  //  const [user] = useState({
-  //   id: `${users}`
-  // })
-  //   const [movie] = useState({
-  //     id: `${apiId}`
-  //   })
+
     const [note, setNote] = useState({
       note: "",
-      userId: `${user}`,
+      userId: currentUser,
       apiId: `${apiId}`
     });
 
@@ -56,21 +50,20 @@ export const NoteForm = ({apiId, user}) => {
                 id: note.id,
                 note: note.note,
                 apiId: parseInt(`${note.apiId}`),
-                userId: parseInt(note.userId)
+                userId: currentUser
             })
           }else {
             addNote({
                 note: note.note,
                 apiId: parseInt(`${note.apiId}`),
-                userId: parseInt(note.userId)
+                userId: currentUser
             })
           }
         }
       }
 
       useEffect(() => {
-        getUsers()
-        .then(getMovies)
+        getMovies()
         .then(() => {
           if (noteId) {
             getNoteById(noteId)
@@ -97,7 +90,6 @@ export const NoteForm = ({apiId, user}) => {
             </div>
           </fieldset>
           <button className="btn btn-primary"
-            disabled={isLoading}
             onClick={event => {
               event.preventDefault() // Prevent browser from submitting the form and refreshing the page
               handleSaveNote()

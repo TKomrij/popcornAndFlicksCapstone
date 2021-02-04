@@ -4,7 +4,6 @@ import { MovieList} from "./components/movies/MovieList"
 import { MovieProvider } from "./components/movies/MovieProvider"
 import { MovieDetail } from "./components/movies/MovieDetails"
 import { NoteProvider } from "./components/notes/NoteProvider"
-import { UserProvider } from "./components/users/UserProvider"
 import { FavoriteProvider } from "./components/saved/favorites/FavoriteProvider"
 import { FavoriteList } from "./components/saved/favorites/FavoriteList"
 import { WatchLaterProvider } from "./components/saved/watchLaters/WatchLaterProvider"
@@ -14,7 +13,7 @@ import "./Application.css"
 export const ApplicationViews = () => {
   return (
       <>
-      <UserProvider>
+  
       <NoteProvider>
         <MovieProvider>
             <Route exact path="/">
@@ -27,10 +26,9 @@ export const ApplicationViews = () => {
             </Route>
         </MovieProvider>
       </NoteProvider>
-      </UserProvider>
+   
 
       
-      <UserProvider>
         <NoteProvider>
           <MovieProvider>
             <FavoriteProvider>
@@ -47,8 +45,7 @@ export const ApplicationViews = () => {
             </FavoriteProvider>
           </MovieProvider>
         </NoteProvider>
-      </UserProvider>
-       
+    
       </>
   )
 }

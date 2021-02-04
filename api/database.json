@@ -35,16 +35,28 @@
       "apiId": 299534,
       "userId": 1,
       "id": 5
+    },
+    {
+      "note": "woah",
+      "apiId": 464052,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "note": "austin is cool",
+      "apiId": 464052,
+      "userId": 2,
+      "id": 7
     }
   ],
-  "watchLaters": [
+  "watchLaterMovies": [
     {
       "id": 1,
       "apiId": 464052,
       "userId": 1
     }
   ],
-  "favorites": [
+  "favoriteMovies": [
     {
       "id": 1,
       "apiId": 602269,

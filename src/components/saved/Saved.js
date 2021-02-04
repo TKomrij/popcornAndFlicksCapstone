@@ -15,7 +15,6 @@ export const Saved = () => {
   const { notes, getNotes } = useContext(NoteContext)
 
   useEffect(() => {
-    console.log("useEffect", movieId)
     getMovieById(movieId)
     .then((response) => {
       setMovie(response)

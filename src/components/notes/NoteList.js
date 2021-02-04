@@ -4,8 +4,7 @@ import { NoteCard } from "./NoteCard"
 import "./Note.css"
 
 export const NoteList = ({notes}) => {
-
-  //useEffect - reach out to the world for something
+  const currentUser = parseInt(localStorage.getItem("flicks_user"))
   const { deleteNote } = useContext(NoteContext)
 
   const handleRelease = (noteId) => {
@@ -14,9 +13,8 @@ export const NoteList = ({notes}) => {
 
   return (
     <div className="notes">
-      {console.log("NoteList: Render", notes)}
       {
-        notes.map(note => {
+        notes.filter(note => note.userId === currentUser).map(note => {
           return <NoteCard key={note.id} note={note} handleRelease={handleRelease} />
         })
       }
