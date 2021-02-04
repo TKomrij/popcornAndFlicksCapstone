@@ -1,8 +1,14 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
 .movie {
 display: flex;
 flex-direction: column;
 text-align: center;
-flex-basis: 30%;
+flex-basis: 25%;
 margin-bottom: 30px;
 }
 
@@ -16,7 +22,7 @@ margin-bottom: 30px;
 
 .movie__title a {
   text-decoration: none;
-  color: black
+  color: white
 }
 
 .movie__title:hover {
@@ -30,7 +36,7 @@ margin-bottom: 30px;
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 3px 4px 8px  #585858;
-  background-color: rgba(0, 0, 0, 0.788);
+  background-color: black;
   color: white;
   border-style: none;
   font-family: 'Source Sans Pro', Arial, sans-serif;

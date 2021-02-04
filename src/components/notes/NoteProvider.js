@@ -8,13 +8,13 @@ export const NoteProvider = (props) => {
     const [notes, setNotes] = useState([])
 
     const getNotes = () => {
-        return fetch("http://localhost:8088/notes")
+        return fetch("http://localhost:8088/notes?_expand=user")
         .then(res => res.json())
         .then(setNotes)
     }
 
     const getNotesByMovieId = (apiId) => {
-        return fetch("http://localhost:8088/notes")
+        return fetch("http://localhost:8088/notes?_expand=user")
         .then(res => res.json())
         .then(res => { 
            const filteredNotes = res.filter(note => note.apiId === parseInt(apiId))

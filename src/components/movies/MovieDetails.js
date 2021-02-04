@@ -8,18 +8,15 @@ import { NoteContext } from "../notes/NoteProvider"
 import "./Details.css"
 
 
+
 export const MovieDetail = () => {
   const { getMovieById } = useContext(MovieContext)
   const { movieId } = useParams();
   const [movie, setMovie] = useState({})
-
-  // const { getUserById } = useContext(UserContext)
-  // const { userId } = useParams();
  
-  let { notes, getNotesByMovieId } = useContext(NoteContext)
+  const { notes, getNotesByMovieId } = useContext(NoteContext)
 
   useEffect(() => {
-    console.log("useEffect", movieId)
     getMovieById(movieId)
     .then((response) => {
       setMovie(response) 
@@ -27,13 +24,8 @@ export const MovieDetail = () => {
     .then(() => {
       return getNotesByMovieId(movieId)
     })
-    .then(() => {
-      console.log("matchingNotes", notes)
-    })
-    }, [])
-
-
     
+})
 
   return (
     <>

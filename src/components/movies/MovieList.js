@@ -8,14 +8,12 @@ export const MovieList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("MovieList: useEffect - getMovies")
     getMovies()
   
   }, [])
 
   return (
     <div className="movies">
-      {console.log("MovieList: Render", movies)}
       {
         movies.map(movie => {
           return <MovieCard key={movie.id} movie={movie} />
