@@ -25,7 +25,7 @@ export const MovieDetail = () => {
       return getNotesByMovieId(movieId)
     })
     
-})
+}, [])
 
   return (
     <>

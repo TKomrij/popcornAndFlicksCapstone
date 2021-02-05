@@ -12,7 +12,7 @@ export const WatchLaterCard = ({watchLater}) => (
                 <option value="Favorites">Favorites</option>
                 <option value="WatchLater">Watch Later</option>
             </select>
-            <button className="movie__delete">Delete Movie</button>
+            <button className="movie__delete">Delete</button>
         </div>
     </section>
 )

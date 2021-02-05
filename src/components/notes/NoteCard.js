@@ -5,9 +5,10 @@ import "./Note.css"
 export const NoteCard = ({note, handleRelease}) => {
 return (
     <section className="note">
-        <h3 className="note__user__name">{note.user?.name}</h3>
-        <p className="note__note">{note.note}</p>
-        <button onClick={() => handleRelease(note.id)}>delete Note</button>
+        <h4 className="note__note">{note.note}</h4>
+        <div className="note__delete__flex">
+            <button className="note__delete" onClick={() => handleRelease(note.id)}>Delete</button>
+        </div>
     </section>
 )
 }
