@@ -1,12 +1,38 @@
 .notes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .note {
-    flex-basis: 20%;
+    flex-basis: 15%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid rgb(32, 218, 156);
+    border: 1px solid black;
+    border-radius: 15px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.note__delete {
+  border-radius: 6px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.noteForm {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  border-radius: 6px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: bold;
 }

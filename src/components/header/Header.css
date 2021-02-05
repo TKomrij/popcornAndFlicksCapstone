@@ -11,8 +11,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-bottom: 5px;
   height: auto;
-  width: 250px;
+  width: 240px;
+}
+
+.header__logo:hover {
+  transform: scale(1.05);
 }
 
 .header__saved {
@@ -41,8 +46,8 @@
   background-color: rgba(243, 95, 75, 0.863);
 }
 
-.header__saved__link:hover {
-  text-decoration: underline;
+.header__saved__text:hover {
+  background-color: rgba(241, 51, 26, 0.863);
 }
 
 .searchBar {

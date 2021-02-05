@@ -23,7 +23,7 @@ export const NoteForm = ({apiId}) => {
       apiId: `${apiId}`
     });
 
-    const [setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
     const { noteId } = useParams();
 
     

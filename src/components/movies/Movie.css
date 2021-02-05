@@ -6,6 +6,7 @@
 
 .movie {
 display: flex;
+align-items: center;
 flex-direction: column;
 text-align: center;
 flex-basis: 25%;
@@ -13,7 +14,16 @@ margin-bottom: 30px;
 }
 
 .movie__poster {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
   border-radius: 10px;
+  background-position: center;
+  background-size: contain;
+}
+
+.movie__link {
+  width: 200px;
 }
 
 .movie__poster:hover {
@@ -28,6 +38,12 @@ margin-bottom: 30px;
 .movie__title:hover {
   text-decoration: underline;
   color: black
+}
+
+.poster__button {
+  border: none;
+  background-color: transparent;
+  margin: 1rem;
 }
 
 .movie__save {
@@ -47,10 +63,17 @@ margin-bottom: 30px;
   margin-left: 5px;
   border-radius: 6px;
   height: 20px;
-  box-shadow: 3px 4px 8px  #585858;
   background-color: black;
   color: white;
   border-style: none;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-weight: bold;
+}
+
+.inactive {
+  fill: grey;
+}
+
+.active {
+  fill: red;
 }
