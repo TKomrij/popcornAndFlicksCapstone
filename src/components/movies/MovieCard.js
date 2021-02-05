@@ -1,8 +1,18 @@
-import React from "react"
+// import React, { useContext, useEffect } from "react"
+// import { MovieContext } from "./MovieProvider"
 import { Link } from "react-router-dom"
 import "./Movie.css"
 
-export const MovieCard = ({movie}) => (
+export const MovieCard = ({movie}) => {
+
+// const { movies, saveToFavorites } = useContext(MovieContext)
+
+// useEffect(() => {
+//     saveToFavorites({movie})
+  
+//   }, [])
+
+    return (
     <section className="movie">
         <Link className="movie__link "to={`/movies/detail/${movie.id}`}><img className="movie__poster" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt="movie poster" width="200" height="300"/></Link>
         <h3 className="movie__title"><Link to={`/movies/detail/${movie.id}`}>{movie.title}</Link></h3>
@@ -12,4 +22,5 @@ export const MovieCard = ({movie}) => (
             <option value="WatchLater">Watch Later</option>
         </select>
     </section>
-)
+    )
+}

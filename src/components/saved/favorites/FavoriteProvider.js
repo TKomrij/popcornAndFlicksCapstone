@@ -6,11 +6,9 @@ export const FavoriteProvider = (props) => {
   const [favorites, setFavorites] = useState([])
 
   const getFavorites = () => {
-    return fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=ec184360c1a6b89d3c57e88523457d51&language=en-US")
+    return fetch("http://localhost:8088/favoriteMovies")
     .then(res => res.json())
-      .then((movieObj) => {
-        setFavorites(movieObj.results)
-      })
+      .then(setFavorites)
 }
 
 

@@ -20,6 +20,17 @@ export const MovieProvider = (props) => {
             .then(res => res.json())
     }
 
+    // const saveToFavorites = (movieObj) => {
+    //     return fetch("http://localhost:8088/favoriteMovies"), {
+    //     method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(movieObj)
+    //     }
+    //     .then(getMovies)
+    // }
+
     /*
         You return a context provider which has the
         `animals` state, `getAnimals` function,

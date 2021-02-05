@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { NoteContext } from "./NoteProvider"
 import { MovieContext } from "../movies/MovieProvider"
 import "./Note.css"
@@ -23,8 +23,7 @@ export const NoteForm = ({apiId}) => {
       apiId: `${apiId}`
     });
 
-    const history = useHistory();
-    const [isLoading, setIsLoading] = useState(true);
+    const [setIsLoading] = useState(true);
     const { noteId } = useParams();
 
     
