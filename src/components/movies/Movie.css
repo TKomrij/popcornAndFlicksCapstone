@@ -22,7 +22,7 @@ margin-bottom: 30px;
 
 .movie__title a {
   text-decoration: none;
-  color: white
+  color: black
 }
 
 .movie__title:hover {
@@ -32,9 +32,21 @@ margin-bottom: 30px;
 
 .movie__save {
   width: auto;
-  height: 5%;
+  height: 20px;
   margin: 0 auto;
   border-radius: 5px;
+  box-shadow: 3px 4px 8px  #585858;
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.movie__delete {
+  margin-left: 5px;
+  border-radius: 6px;
+  height: 20px;
   box-shadow: 3px 4px 8px  #585858;
   background-color: black;
   color: white;

@@ -10,7 +10,7 @@ export const MovieList = () => {
   useEffect(() => {
     getMovies()
   
-  }, [])
+  })
 
   return (
     <div className="movies">
