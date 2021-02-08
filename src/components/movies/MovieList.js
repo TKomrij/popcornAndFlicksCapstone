@@ -14,7 +14,10 @@ export const MovieList = () => {
   useEffect(() => {
     getMovies()
     getFavoriteMovies(currentUser)
-    .then(res => setFavoriteList(res))
+    .then(res => {
+      setFavoriteList(res)
+      console.log("list of favorite movies by userId", res)
+    })
   }, [])
 
   return (

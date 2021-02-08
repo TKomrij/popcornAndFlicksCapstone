@@ -14,49 +14,49 @@
   "notes": [
     {
       "note": "Gal Gadot is cracked!",
-      "apiId": 464052,
+      "movieId": 464052,
       "userId": 1,
       "id": 2
     },
     {
       "note": "Wow this movie is great!",
-      "apiId": 464052,
+      "movieId": 464052,
       "userId": 1,
       "id": 3
     },
     {
       "note": "What a weird movie. I don't think this is for kids.",
-      "apiId": 508442,
+      "movieId": 508442,
       "userId": 1,
       "id": 4
     },
     {
       "note": "Bye Bye Tony Stark.",
-      "apiId": 299534,
+      "movieId": 299534,
       "userId": 1,
       "id": 5
     },
     {
       "note": "woah",
-      "apiId": 464052,
+      "movieId": 464052,
       "userId": 1,
       "id": 6
     },
     {
       "note": "austin is cool",
-      "apiId": 464052,
+      "movieId": 464052,
       "userId": 2,
       "id": 7
     },
     {
       "note": "Oof.",
-      "apiId": 780154,
+      "movieId": 780154,
       "userId": 1,
       "id": 8
     },
     {
       "note": "wow!",
-      "apiId": 464052,
+      "movieId": 464052,
       "userId": 1,
       "id": 9
     }
@@ -64,15 +64,15 @@
   "watchLaterMovies": [
     {
       "id": 1,
-      "apiId": 464052,
+      "movieId": 464052,
       "userId": 1
     }
   ],
   "favoriteMovies": [
     {
-      "id": 1,
-      "apiId": 602269,
-      "userId": 1
+      "id": "97d132ea-bc4b-431c-90b7-159d29afae32",
+      "userId": 2,
+      "apiMovieId": 602269
     }
   ]
 }

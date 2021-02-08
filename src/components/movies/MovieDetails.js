@@ -31,7 +31,6 @@ export const MovieDetail = () => {
     <>
     <section className="movieDetails">
       <div className="movieDetails__poster__title__overview">
-        <Link className="movieDetails__back__link" to={`/`}><button className="movieDetails__back">Back</button></Link>
         <img className="movieDetails__poster" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt="movie posters"/>
         <div className="movieDetails__title__overview__save">
           <h2 className="movieDetails__title">{movie.title}</h2>
@@ -46,7 +45,7 @@ export const MovieDetail = () => {
       </div>
     </section>
     <section>
-      <NoteForm apiId={movieId} />
+      <NoteForm movieId={movieId} />
     </section>
     <section>
       <NoteList notes={notes} />

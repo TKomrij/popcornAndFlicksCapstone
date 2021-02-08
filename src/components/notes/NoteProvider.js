@@ -13,11 +13,11 @@ export const NoteProvider = (props) => {
         .then(setNotes)
     }
 
-    const getNotesByMovieId = (apiId) => {
+    const getNotesByMovieId = (movieId) => {
         return fetch("http://localhost:8088/notes?_expand=user")
         .then(res => res.json())
         .then(res => { 
-           const filteredNotes = res.filter(note => note.apiId === parseInt(apiId))
+           const filteredNotes = res.filter(note => note.apiMovieId === parseInt(movieId))
            setNotes(filteredNotes)
         })
     }
