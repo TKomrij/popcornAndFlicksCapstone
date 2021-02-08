@@ -21,6 +21,7 @@ const favoriteButtonClicked = (e) => {
     if(favoriteState === false) {
         favoriteMovie(movie)
     } else {
+        // this is to get the uuid from the favorited Movies list to be able to delete it
         getFavoriteMovies(currentUser).then(res => {
             unfavoriteMovie(res.find(favoriteMovie => favoriteMovie.apiMovieId === movie.id).id)
         })
