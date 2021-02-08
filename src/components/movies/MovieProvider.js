@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react"
+import { v4 as uuidv4 } from 'uuid';
 
 // The context is imported and used by individual components that need data
 export const MovieContext = createContext()
@@ -22,16 +23,39 @@ export const MovieProvider = (props) => {
 
 
     const getFavoriteMovies = (userId) => {
-        console.log(userId)
         return fetch("http://localhost:8088/favoriteMovies")
         .then(res => res.json())
         .then(res => res.filter(movie => movie.userId === userId))
     }
 
+    const favoriteMovie = movieObj => {
+    
+        const currentUserId = parseInt(localStorage.getItem("flicks_user"))
+        const favortieMovieObject = {
+            id: uuidv4(),
+            userId: currentUserId,
+            apiMovieId: movieObj.id
+        }
+     
+        return fetch("http://localhost:8088/favoriteMovies", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(favortieMovieObject)
+        })
+    }
+
+    const unfavoriteMovie = (id) => {
+        return fetch(`http://localhost:8088/favoriteMovies/${id}`, {
+            method: "DELETE",
+        })
+    }
+
   
     return (
         <MovieContext.Provider value={{
-            movies, getMovies, getMovieById, getFavoriteMovies
+            movies, getMovies, getMovieById, getFavoriteMovies, favoriteMovie, unfavoriteMovie
         }}>
             {props.children}
         </MovieContext.Provider>

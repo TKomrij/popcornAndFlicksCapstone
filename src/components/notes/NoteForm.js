@@ -5,7 +5,7 @@ import { MovieContext } from "../movies/MovieProvider"
 import "./Note.css"
 
 
-export const NoteForm = ({apiId}) => {
+export const NoteForm = ({apiMovieId}) => {
     const { addNote, getNoteById, updateNote } = useContext(NoteContext)
     const { getMovies } = useContext(MovieContext)
     const currentUser = parseInt(localStorage.getItem("flicks_user"))
@@ -20,7 +20,7 @@ export const NoteForm = ({apiId}) => {
     const [note, setNote] = useState({
       note: "",
       userId: currentUser,
-      apiId: `${apiId}`
+      apiMovieId: `${apiMovieId}`
     });
 
     const [isLoading, setIsLoading] = useState(true);
@@ -48,13 +48,13 @@ export const NoteForm = ({apiId}) => {
             updateNote({
                 id: note.id,
                 note: note.note,
-                apiId: parseInt(`${note.apiId}`),
+                apiMovieId: parseInt(`${note.apiMovieId}`),
                 userId: currentUser
             })
           }else {
             addNote({
                 note: note.note,
-                apiId: parseInt(`${note.apiId}`),
+                apiMovieId: parseInt(`${note.apiMovieId}`),
                 userId: currentUser
             })
           }
