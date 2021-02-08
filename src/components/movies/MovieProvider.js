@@ -112,10 +112,31 @@ export const MovieProvider = (props) => {
     }
 
 
+    const watchLaterButtonClicked = (movieClicked, watchLaterState, setWatchLaterState) => e => {
+            e.preventDefault()
+        
+            if(watchLaterState === false) {
+                watchLaterMovie(movieClicked)
+            } else {
+                // this is to get the id from the favorited Movies list to be able to delete it
+                getWatchLaterMovies(currentUser).then(res => {
+                    deleteWatchLaterMovie(res.find(watchLaterMovie => watchLaterMovie.apiMovieId === movieClicked.id).id)
+                })
+            }
+        
+            setWatchLaterState(!watchLaterState)
+        }
+
+        const isWatchLaterMovie = (watchLaterList, movie) => {
+                const movieIds = watchLaterList.map(movie => movie.apiMovieId)
+                return movieIds.includes(movie.id)
+            }
+
+
   
     return (
         <MovieContext.Provider value={{
-            movies, getMovies, getMovieById, getFavoriteMovies, favoriteMovie, unfavoriteMovie,  getWatchLaterMovies, watchLaterMovie, deleteWatchLaterMovie, favoriteButtonClicked, isFavoritedMovie
+            movies, getMovies, getMovieById, getFavoriteMovies, favoriteMovie, unfavoriteMovie,  getWatchLaterMovies, watchLaterMovie, deleteWatchLaterMovie, favoriteButtonClicked, isFavoritedMovie, watchLaterButtonClicked, isWatchLaterMovie
         }}>
             {props.children}
         </MovieContext.Provider>

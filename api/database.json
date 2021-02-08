@@ -27,6 +27,14 @@
       "poster_path": "/p9YDHJKvUoi7v2SCd3vLGPae1Xp.jpg",
       "title": "Space Sweepers",
       "overview": "In the year 2092, space is full of dangerous floating garbage like discarded satellites and deserted spaceships. The crew of a space junk collector ship called The Victory discovers a humanoid robot that’s known to be a weapon of mass destruction. They get involved in a risky business deal and travel through space looking for garbage they can make money off of while also competing with rival junk collectors."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "apiMovieId": 644092,
+      "poster_path": "/tTWl37oAYRXS3D5mEHmjveXXyrN.jpg",
+      "title": "Finding 'Ohana",
+      "overview": "Two Brooklyn siblings' summer in a rural Oahu town takes an exciting turn when a journal pointing to long-lost treasure sets them on an adventure, leading them to reconnect with their Hawaiian heritage."
     }
   ],
   "favoriteMovies": [
