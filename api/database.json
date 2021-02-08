@@ -13,66 +13,30 @@
   ],
   "notes": [
     {
-      "note": "Gal Gadot is cracked!",
-      "movieId": 464052,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "note": "Wow this movie is great!",
-      "movieId": 464052,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "note": "What a weird movie. I don't think this is for kids.",
-      "movieId": 508442,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "note": "Bye Bye Tony Stark.",
-      "movieId": 299534,
-      "userId": 1,
-      "id": 5
-    },
-    {
       "note": "woah",
-      "movieId": 464052,
+      "apiMovieId": null,
       "userId": 1,
-      "id": 6
-    },
-    {
-      "note": "austin is cool",
-      "movieId": 464052,
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "note": "Oof.",
-      "movieId": 780154,
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "note": "wow!",
-      "movieId": 464052,
-      "userId": 1,
-      "id": 9
+      "id": 1
     }
   ],
   "watchLaterMovies": [
     {
       "id": 1,
-      "movieId": 464052,
-      "userId": 1
+      "userId": 1,
+      "apiMovieId": 581389,
+      "poster_path": "/p9YDHJKvUoi7v2SCd3vLGPae1Xp.jpg",
+      "title": "Space Sweepers",
+      "overview": "In the year 2092, space is full of dangerous floating garbage like discarded satellites and deserted spaceships. The crew of a space junk collector ship called The Victory discovers a humanoid robot that’s known to be a weapon of mass destruction. They get involved in a risky business deal and travel through space looking for garbage they can make money off of while also competing with rival junk collectors."
     }
   ],
   "favoriteMovies": [
     {
-      "id": "97d132ea-bc4b-431c-90b7-159d29afae32",
-      "userId": 2,
-      "apiMovieId": 602269
+      "id": 1,
+      "userId": 1,
+      "apiMovieId": 464052,
+      "poster_path": "/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
+      "title": "Wonder Woman 1984",
+      "overview": "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s and finds a formidable foe by the name of the Cheetah."
     }
   ]
 }

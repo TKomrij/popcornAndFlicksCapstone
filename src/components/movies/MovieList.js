@@ -4,10 +4,11 @@ import { MovieCard } from "./MovieCard"
 import "./Movie.css"
 
 export const MovieList = () => {
-  const { movies, getMovies, getFavoriteMovies } = useContext(MovieContext)
+  const { movies, getMovies, getFavoriteMovies, getWatchLaterMovies } = useContext(MovieContext)
   const currentUser = parseInt(localStorage.getItem("flicks_user"))
 
   const [favoriteList, setFavoriteList] = useState([])
+  const [watchLaterList, setWatchLaterList] = useState([])
 
 
   //useEffect - reach out to the world for something
@@ -18,13 +19,18 @@ export const MovieList = () => {
       setFavoriteList(res)
       console.log("list of favorite movies by userId", res)
     })
+    getWatchLaterMovies(currentUser)
+    .then(res => {
+      setWatchLaterList(res)
+      console.log("list of watchLater movies by userId", res)
+    })
   }, [])
 
   return (
     <div className="movies">
       {
         movies.map(movie => {
-          return <MovieCard key={movie.id} movie={movie} favoriteList={favoriteList}  />
+          return <MovieCard key={movie.id} movie={movie} favoriteList={favoriteList} watchLaterList={watchLaterList} />
         })
       }
     </div>

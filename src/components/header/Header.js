@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import logo from '../../images/logo.png'
-import SearchField from "react-search-field";
+import { Filter } from "./Filter"
 import "./Header.css"
 
 export const Header = () => {
@@ -20,13 +20,8 @@ export const Header = () => {
                 <p className="header__saved__text">Saved Movies</p>
               </Link>
             </li>
-            <li className="searchBar">
-            <SearchField
-              placeholder="Search..."
-              // onChange={onChange}
-              searchText="Search"
-              className="searchField"
-            />
+            <li className="filter">
+              {/* <Filter /> */}
             </li>
           </div>
       </ul>
