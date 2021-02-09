@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import logo from '../../images/logo.png'
-import { Filter } from "./Filter"
+import { Logout } from "../auth/Logout"
+// import { Filter } from "./Filter"
 import "./Header.css"
 
 export const Header = () => {
@@ -14,14 +15,17 @@ export const Header = () => {
             <img className="header__logo" src={logo} alt="logo" />
             </Link>
           </li>
-          <div className="saved__search">
+          <div className="saved">
             <li className="header__saved">
               <Link className="header__saved__link" to="/saved">
                 <p className="header__saved__text">Saved Movies</p>
               </Link>
             </li>
-            <li className="filter">
-              {/* <Filter /> */}
+            {/* <li className="filter">
+              <Filter />
+            </li> */}
+            <li className="logout">
+              <Logout />
             </li>
           </div>
       </ul>

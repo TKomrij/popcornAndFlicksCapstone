@@ -16,13 +16,12 @@ export const NoteProvider = (props) => {
     const getNotesByMovieId = (movieId) => {
         return fetch("http://localhost:8088/notes?_expand=user")
         .then(res => res.json())
-        .then(res => { 
-           const filteredNotes = res.filter(note => note.apiMovieId === parseInt(movieId))
-           setNotes(filteredNotes)
-        })
+        .then(res => res.filter(note => note.apiMovieId === parseInt(movieId))
+        )
+        .then(setNotes)
     }
 
-    const addNote = noteObj => {
+    const addNote = (noteObj, movieId) => {
         return fetch("http://localhost:8088/notes", {
             method: "POST",
             headers: {
@@ -30,7 +29,9 @@ export const NoteProvider = (props) => {
             },
             body: JSON.stringify(noteObj)
         })
-        .then(getNotes)
+        .then(() => {
+            getNotesByMovieId(movieId)
+        })
     }
 
     const getNoteById = (id) => {
@@ -49,11 +50,13 @@ export const NoteProvider = (props) => {
           .then(getNotes)
       }
 
-      const deleteNote = noteId => {
+      const deleteNote = (noteId, movieId) => {
         return fetch(`http://localhost:8088/notes/${noteId}`, {
             method: "DELETE"
         })
-            .then(getNotes)
+        .then(() => {
+            getNotesByMovieId(movieId)
+        })
     }
 
     

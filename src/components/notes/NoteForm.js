@@ -44,22 +44,13 @@ export const NoteForm = ({apiMovieId}) => {
             window.alert("Please write a note")
         } else {
           setIsLoading(true);
-          if (noteId){
-            updateNote({
-                id: note.id,
-                note: note.note,
-                apiMovieId: parseInt(`${note.apiMovieId}`),
-                userId: currentUser
-            })
-          }else {
             addNote({
                 note: note.note,
                 apiMovieId: parseInt(`${note.apiMovieId}`),
                 userId: currentUser
-            })
+            }, apiMovieId)
           }
         }
-      }
 
       useEffect(() => {
         getMovies()

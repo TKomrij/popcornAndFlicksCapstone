@@ -11,14 +11,7 @@
       "name": "Austin Parvin"
     }
   ],
-  "notes": [
-    {
-      "note": "woah",
-      "apiMovieId": null,
-      "userId": 1,
-      "id": 1
-    }
-  ],
+  "notes": [],
   "watchLaterMovies": [
     {
       "id": 1,
