@@ -39,9 +39,7 @@ export const MovieDetail = () => {
       }
       })
     })
-    .then(() => {
-      getNotesByMovieId(movieId)
-      }) 
+    getNotesByMovieId(movieId) 
 }, [])
 
 
