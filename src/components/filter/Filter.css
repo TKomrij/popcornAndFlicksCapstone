@@ -1,0 +1,20 @@
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto 55px;
+}
+
+.dropdown {
+  border-radius: 15px;
+  color: white;
+  border: white;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  background-color: rgba(243, 95, 75, 0.863);
+  height: 30px;
+}
+
+.dropdown:hover {
+  background-color: rgba(241, 51, 26, 0.863);
+}

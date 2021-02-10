@@ -133,6 +133,7 @@ export const MovieProvider = (props) => {
             }
 
 
+
   
     return (
         <MovieContext.Provider value={{

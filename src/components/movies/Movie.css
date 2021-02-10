@@ -43,7 +43,7 @@ margin-bottom: 30px;
 .poster__button {
   border: none;
   background-color: transparent;
-  margin: 1rem;
+  margin-top: 5px;
 }
 
 .movie__save {

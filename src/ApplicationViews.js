@@ -8,29 +8,39 @@ import { FavoriteProvider } from "./components/saved/favorites/FavoriteProvider"
 import { FavoriteList } from "./components/saved/favorites/FavoriteList"
 import { WatchLaterProvider } from "./components/saved/watchLaters/WatchLaterProvider"
 import { WatchLaterList } from "./components/saved/watchLaters/WatchLaterList"
+import { Filter } from "./components/filter/Filter"
+import { GenreProvider } from "./components/filter/FilterProvider"
 import "./Application.css"
 
 export const ApplicationViews = () => {
   return (
       <>
-  
-        <FavoriteProvider>
-          <WatchLaterProvider>
-            <NoteProvider>
-              <MovieProvider>
-                  <Route exact path="/">
-                      <h1 className="movies__header">Popular Movies This Week</h1>
-                      <MovieList/>
-                  </Route>
 
-                  <Route exact path="/movies/detail/:movieId(\d+)">
-                      <MovieDetail />
+        
+
+        <GenreProvider>
+          <FavoriteProvider>
+            <WatchLaterProvider>
+              <NoteProvider>
+                <MovieProvider>
+                <Route exact path="/">
+                    <div className="title__filter">
+                      <h1 className="movies__header">Popular Movies This Week</h1>
+                      <Filter />
+                    </div>
                   </Route>
-              </MovieProvider>
-            </NoteProvider>
-          </WatchLaterProvider>
-        </FavoriteProvider>
-   
+                    <Route exact path="/">
+                      <MovieList/>
+                    </Route>
+
+                    <Route exact path="/movies/detail/:movieId(\d+)">
+                        <MovieDetail />
+                    </Route>
+                </MovieProvider>
+              </NoteProvider>
+            </WatchLaterProvider>
+          </FavoriteProvider>
+        </GenreProvider>
 
       
         <NoteProvider>

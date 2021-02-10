@@ -17,12 +17,10 @@ export const MovieList = () => {
     getFavoriteMovies(currentUser)
     .then(res => {
       setFavoriteList(res)
-      console.log("list of favorite movies by userId", res)
     })
     getWatchLaterMovies(currentUser)
     .then(res => {
       setWatchLaterList(res)
-      console.log("list of watchLater movies by userId", res)
     })
   }, [])
 
