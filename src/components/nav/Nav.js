@@ -2,10 +2,9 @@ import React from "react"
 import { Link } from "react-router-dom"
 import logo from '../../images/logo.png'
 import { Logout } from "../auth/Logout"
-// import { Filter } from "./Filter"
-import "./Header.css"
+import "./Nav.css"
 
-export const Header = () => {
+export const Nav = () => {
 
   return (
 
@@ -21,13 +20,11 @@ export const Header = () => {
                 <p className="header__saved__text">Saved Movies</p>
               </Link>
             </li>
-            {/* <li className="filter">
-              <Filter />
-            </li> */}
+          </div>
             <li className="logout">
               <Logout />
             </li>
-          </div>
+         
       </ul>
   )
 }

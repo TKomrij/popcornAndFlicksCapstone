@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Redirect } from "react-router-dom";
-import "../header/Header.css" 
+import "../nav/Nav.css" 
 
 export const Logout = () => {
 
