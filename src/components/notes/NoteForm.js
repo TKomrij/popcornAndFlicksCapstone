@@ -6,15 +6,9 @@ import "./Note.css"
 
 
 export const NoteForm = ({apiMovieId}) => {
-    const { addNote, getNoteById, updateNote } = useContext(NoteContext)
-    const { getMovies } = useContext(MovieContext)
+    const { addNote, getNoteById } = useContext(NoteContext)
+    const { getMovies, setMovies } = useContext(MovieContext)
     const currentUser = parseInt(localStorage.getItem("flicks_user"))
-
-    /*
-    With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props.
-
-    Define the intial state of the form inputs with useState()
-    */
 
 
     const [note, setNote] = useState({
@@ -54,6 +48,10 @@ export const NoteForm = ({apiMovieId}) => {
 
       useEffect(() => {
         getMovies()
+        .then((movieObj) => {
+          console.log("movieObj results", movieObj.results)
+        setMovies(movieObj.results)
+      })
         .then(() => {
           if (noteId) {
             getNoteById(noteId)
