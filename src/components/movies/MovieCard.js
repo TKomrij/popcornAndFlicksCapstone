@@ -10,7 +10,7 @@ const [watchLaterState, setWatchLaterState] = useState(false)
 const [favoriteState, setFavoriteState] = useState(false)
 
 useEffect(() => {
-    // 
+    
     if(isFavoritedMovie(favoriteList, movie)) {
         setFavoriteState(true)
     }

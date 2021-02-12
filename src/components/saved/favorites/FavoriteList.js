@@ -5,6 +5,7 @@ import "../../movies/Movie.css"
 
 export const FavoriteList = () => {
   const { favorites, getFavorites } = useContext(FavoriteContext)
+  const currentUser = parseInt(localStorage.getItem("flicks_user"))
 
   //useEffect - reach out to the world for something
   useEffect(() => {
@@ -14,7 +15,7 @@ export const FavoriteList = () => {
   return (
     <div className="movies favorites">
       {
-        favorites.map(favorite => {
+       favorites.filter(favorite => favorite.userId === currentUser).map(favorite => {
           return <FavoriteCard key={favorite.id} favorite={favorite} />
         })
       }
