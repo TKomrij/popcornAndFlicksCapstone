@@ -5,6 +5,7 @@ import "../../movies/Movie.css"
 
 export const WatchLaterList = () => {
   const { watchLaters, getWatchLaters } = useContext(WatchLaterContext)
+  const currentUser = parseInt(localStorage.getItem("flicks_user"))
 
   //useEffect - reach out to the world for something
   useEffect(() => {
@@ -15,7 +16,7 @@ export const WatchLaterList = () => {
   return (
     <div className="movies watchLaters">
       {
-        watchLaters.map(watchLater => {
+       watchLaters.filter(watchLater => watchLater.userId === currentUser).map(watchLater => {
           return <WatchLaterCard key={watchLater.id} watchLater={watchLater} />
         })
       }

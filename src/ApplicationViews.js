@@ -17,7 +17,7 @@ export const ApplicationViews = () => {
       <>
 
         
-
+     
         <GenreProvider>
           <FavoriteProvider>
             <WatchLaterProvider>
@@ -50,17 +50,14 @@ export const ApplicationViews = () => {
                 <Route exact path="/saved">
                     <h2 className="movies__header">Favorites</h2>
                     <FavoriteList/>
-                </Route>
-                
-                <Route exact path="/saved">
-                  <h2 className="movies__header">Watch Later</h2>
+                    <h2 className="movies__header">Watch Later</h2>
                   <WatchLaterList/>
                 </Route>
               </WatchLaterProvider>
             </FavoriteProvider>
           </MovieProvider>
         </NoteProvider>
-    
+
       </>
   )
 }

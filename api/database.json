@@ -9,25 +9,51 @@
       "id": 2,
       "email": "aparvin@gmail.com",
       "name": "Austin Parvin"
+    },
+    {
+      "email": "Joeshep@gmail.com",
+      "name": "Joe Shep",
+      "id": 3
     }
   ],
-  "notes": [],
+  "notes": [
+    {
+      "note": "Kinda deep and dark for a Disney movie, don’t think it’s for children.",
+      "apiMovieId": 508442,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "note": "Gal Gadot was amazing, but the plot of the movie was only so-so.",
+      "apiMovieId": 464052,
+      "userId": 1,
+      "id": 2
+    }
+  ],
   "watchLaterMovies": [
     {
       "id": 1,
-      "userId": 1,
-      "apiMovieId": 581389,
-      "poster_path": "/p9YDHJKvUoi7v2SCd3vLGPae1Xp.jpg",
-      "title": "Space Sweepers",
-      "overview": "In the year 2092, space is full of dangerous floating garbage like discarded satellites and deserted spaceships. The crew of a space junk collector ship called The Victory discovers a humanoid robot that’s known to be a weapon of mass destruction. They get involved in a risky business deal and travel through space looking for garbage they can make money off of while also competing with rival junk collectors."
-    },
-    {
-      "id": 2,
       "userId": 1,
       "apiMovieId": 644092,
       "poster_path": "/tTWl37oAYRXS3D5mEHmjveXXyrN.jpg",
       "title": "Finding 'Ohana",
       "overview": "Two Brooklyn siblings' summer in a rural Oahu town takes an exciting turn when a journal pointing to long-lost treasure sets them on an adventure, leading them to reconnect with their Hawaiian heritage."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "apiMovieId": 577922,
+      "poster_path": "/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
+      "title": "Tenet",
+      "overview": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time."
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "apiMovieId": 581389,
+      "poster_path": "/bmemsraCG1kIthY74NjDnnLRT2Q.jpg",
+      "title": "Space Sweepers",
+      "overview": "In the year 2092, space is full of dangerous floating garbage like discarded satellites and deserted spaceships. The crew of a space junk collector ship called The Victory discovers a humanoid robot that’s known to be a weapon of mass destruction. They get involved in a risky business deal and travel through space looking for garbage they can make money off of while also competing with rival junk collectors."
     }
   ],
   "favoriteMovies": [
@@ -38,6 +64,14 @@
       "poster_path": "/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
       "title": "Wonder Woman 1984",
       "overview": "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s and finds a formidable foe by the name of the Cheetah."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "apiMovieId": 458220,
+      "poster_path": "/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg",
+      "title": "Palmer",
+      "overview": "After 12 years in prison, former high school football star Eddie Palmer returns home to put his life back together—and forms an unlikely bond with Sam, an outcast boy from a troubled home. But Eddie's past threatens to ruin his new life and family."
     }
   ]
 }
