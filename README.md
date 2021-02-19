@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Popcorn and Flicks
+  With Popcorn and Flicks, finding a movie to watch has never been so easy. Popcorn and Flicks is a movie application that will
+  help users find their favorite movies, write notes about them, and find new movies to watch. Users will be able to search through popular movies that week, filter through movies by genre, read a description of a movie, write/delete notes under each movie, and save movies to their favorites or watch later. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  * [Project Requirements and Features List](#project-requirements-and-features-list)
+  * [Technologies Used](#technologies-used)
+  * [Installing and Launching Popcorn and Flicks](#instructions-for-installing-Popcorn-and-Flicks)
+  * [Appendix 1: Planning Documentation](#appendix-1-planning-documentation)
+    * [Entity Relationship Diagrams](#entity-relationship-diagram)
+    * [Wireframes](#wireframes)
+  * [Appendix 2: Set Up Instructions](#appendix-2-set-up-instructions)
 
-## Available Scripts
+## Project Requirements and Features List
+### Get Started
+After a user registers an account with Popcorn and Flicks, they will be taken to a home page that will show all of the popular movies that week. By clicking on a movie poster or movie title, the user is taken to another page that displays a poster for that movie, a plot overview, a favorite and watch later button, and a section to write notes.
 
-In the project directory, you can run:
+### Saving Movies to Favorites and Watch Later
+Once a user has decided on which movie they want to save, on the home page they can simply press the heart or the book mark button on the movie poster to save the movie to either favorites or watch later. If the user is in a movie's deatails, the same favorite and watch later buttons will appear below the movie's overview. In order for the user to see the movies that they have saved, they must press the saved button up in the nav bar and it will take them to a page where all of their favorited and watch later choices are rendered. A user can take movies off of their lists by going into the movie's details and unclicking either the favorite button or the watch later button.
 
-### `yarn start`
+## Technologies Used
+  ### Development Languages and Libraries
+  <img src="./src/images/react.png" width="10%"></img> 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  ### Development Tools
+  <img src="./src/images/github.png" width="10%"></img> <img src="./src/images/vscode.png" width="10%"></img>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instructions for Installing Popcorn and Flicks
+  To launch the Popcorn and Flicks app, you will need to have access to command line tools, node package manager, JSON Server. If you do not have access to any of these tools, you can find instructions for installing them in the [Appendix.](#appendix-2-set-up-instructions)
 
-### `yarn test`
+  Clone this repo on you personal machine using the following command
+  ```sh
+    git@github.com:TKomrij/popcornAndFlicksCapstone.git
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Install the NPM dependencies for this project using the following commands
+  ```sh
+    cd popcorn-and-flicks
+    npm install
+  ```
 
-### `yarn build`
+  From your terminal window, type
+  ```sh
+    npm start
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Now that the server is up and running, you can open an internet browser and access the application
+  ```sh
+    http://localhost:8080/
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ### Congratulations you are now experiencing Popcorn and Flicks!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ## Appendix 1: Planning Documentation
 
-### `yarn eject`
+  ### Entity Relationship Diagram
+  ![Simplified Supper ERD](/src/images/Popcorn_and_Flickss_ERD.png)
+  
+  ### Wireframes/ Mockups
+  <img src="./src/images/login.png" width="45%"></img> 
+  <img src="./src/images/registration.png" width="45%"></img>
+  <img src="./src/images/homePage.png" width="45%"></img> <img src="./src/images/movieDetails.png" width="45%"></img>
+  <img src="./src/images/savedMovies.png" width="45%"></img> 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ ## Appendix 2: Set Up Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  You will need to have command line tools installed for your computer to use terminal commands.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  Linux/ Windows users, please visit the [Git page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the instructions for set up
 
-## Learn More
+  Mac users follow the instructions below
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Open your terminal and type
+  ```sh
+    git --version
+  ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  You will now need to configure your git account. In the terminal window, type:
+  ```sh
+    git config -global user.name "Your Name"
+    git config -global user.email "Your Email"
+  ```
 
-### Code Splitting
+  If you do not have Node.js installed on your machine, visit the [Node.js Download Page](https://nodejs.org/en/download/) and  follow the instructions. To ensure that it is installed correctly, in your terminal window, type
+  ```sh
+    echo $PATH
+  ```
+  Ensure that the result has the following in the $PATH
+  ```sh
+    /usr/local/bin
+    or
+    /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Now you can follow the [installation instructions](#instructions-for-installing-Popcorn-and-Flicks) to get Simplified Supper up and running on your machine.
 
-### Analyzing the Bundle Size
+  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
