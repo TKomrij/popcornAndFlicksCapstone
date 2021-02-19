@@ -54,7 +54,7 @@ Once a user has decided on which movie they want to save, on the home page they 
   ## Appendix 1: Planning Documentation
 
   ### Entity Relationship Diagram
-  ![Simplified Supper ERD](/src/images/Popcorn_and_Flickss_ERD.png)
+  ![Popcorn and Flicks ERD](./src/images/Popcorn_and_Flicks_ERD.png)
   
   ### Wireframes/ Mockups
   <img src="./src/images/login.png" width="45%"></img> 
