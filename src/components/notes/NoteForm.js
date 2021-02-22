@@ -49,7 +49,6 @@ export const NoteForm = ({apiMovieId}) => {
       useEffect(() => {
         getMovies()
         .then((movieObj) => {
-          console.log("movieObj results", movieObj.results)
         setMovies(movieObj.results)
       })
         .then(() => {
@@ -67,11 +66,10 @@ export const NoteForm = ({apiMovieId}) => {
 
       return (
         <form className="noteForm">
-          <h2 className="noteForm__title">{noteId ? "Edit Note" : "Add Note"}</h2>
           <fieldset>
             <div className="form-group">
               <label htmlFor="noteForm__note">Write a note: </label>
-              <input type="text" id="note" required autoFocus className="form-control"
+              <input className="noteForm__input" type="text" id="note" required autoFocus className="form-control"
               placeholder="Notes"
               onChange={handleControlledInputChange}
               value={note.note}/>

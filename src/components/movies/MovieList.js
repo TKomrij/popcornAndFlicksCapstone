@@ -14,7 +14,6 @@ export const MovieList = () => {
   useEffect(() => {
     getMovies()
     .then((movieObj) => {
-      console.log("movieObj results", movieObj.results)
     setMovies(movieObj.results)
   })
     getFavoriteMovies(currentUser)

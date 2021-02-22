@@ -29,7 +29,6 @@ export const MovieProvider = (props) => {
 
 
     const favoriteMovie = movieObj => {
-    console.log(movieObj)
         const currentUserId = parseInt(localStorage.getItem("flicks_user"))
         const favortieMovieObject = {
             id: 0,
@@ -63,7 +62,6 @@ export const MovieProvider = (props) => {
     }
 
     const watchLaterMovie = movieObj => {
-    console.log(movieObj)
         const currentUserId = parseInt(localStorage.getItem("flicks_user"))
         const watchLaterMovieObject = {
             id: 0,

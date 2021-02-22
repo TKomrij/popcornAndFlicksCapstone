@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .movies {
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
 }
 
 .movie {
-display: flex;
-align-items: center;
-flex-direction: column;
-text-align: center;
-flex-basis: 25%;
-margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 25%;
+  margin-bottom: 30px;
 }
 
 .movie__poster {
@@ -32,7 +33,9 @@ margin-bottom: 30px;
 
 .movie__title a {
   text-decoration: none;
-  color: black
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 3px;
 }
 
 .movie__title:hover {

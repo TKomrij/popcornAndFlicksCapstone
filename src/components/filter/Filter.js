@@ -32,10 +32,8 @@ export const Filter = () => {
     .then((movieObj) => {
       // for each movie object, take the object's array of genre ids and combine the array with the empty array movieGenreIds
       movieObj.results.forEach(movie => movieGenreIds = movieGenreIds.concat(movie.genre_ids))
-      console.log("concatted movieGenreIds", movieGenreIds)
       getGenres()
       .then((genreObj) => {
-        console.log(genreObj.genres)
         // filter out all genre ids that do not appear in the movieGenreIds array
         const filteredGenres = genreObj.genres.filter(genre => movieGenreIds.includes(genre.id))
         setGenres(filteredGenres)
