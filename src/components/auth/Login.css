@@ -1,5 +1,10 @@
 .h1, h1 {
   font-size: 2.5rem;
+  color: white;
+}
+
+h2 {
+  color: white;
 }
 
 fieldset {
@@ -44,15 +49,15 @@ fieldset {
 
 .container--login {
   text-align: center;
+  padding-bottom: 30px;
+  box-shadow: 2px 12px 30px #ff0000;
 }
 
 .form--login {
   background-position-x: right;
-  /* background-image: url(logo.png); */
   z-index: 1;
   min-height: 25rem;
   min-width: 45rem;
-  background-color: hsla(0,0%,100%,0.40);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
 }
@@ -67,3 +72,7 @@ fieldset {
   min-height: 5rem;
 }
 
+a {
+  color: white;
+  font-weight: bold;
+}

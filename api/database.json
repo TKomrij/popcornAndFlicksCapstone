@@ -28,38 +28,18 @@
       "apiMovieId": 464052,
       "userId": 1,
       "id": 2
+    },
+    {
+      "note": "woah",
+      "apiMovieId": 458576,
+      "userId": 2,
+      "id": 3
     }
   ],
   "watchLaterMovies": [
     {
       "id": 1,
-      "userId": 1,
-      "apiMovieId": 644092,
-      "poster_path": "/tTWl37oAYRXS3D5mEHmjveXXyrN.jpg",
-      "title": "Finding 'Ohana",
-      "overview": "Two Brooklyn siblings' summer in a rural Oahu town takes an exciting turn when a journal pointing to long-lost treasure sets them on an adventure, leading them to reconnect with their Hawaiian heritage."
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "apiMovieId": 577922,
-      "poster_path": "/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
-      "title": "Tenet",
-      "overview": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time."
-    },
-    {
-      "id": 3,
       "userId": 2,
-      "apiMovieId": 581389,
-      "poster_path": "/bmemsraCG1kIthY74NjDnnLRT2Q.jpg",
-      "title": "Space Sweepers",
-      "overview": "In the year 2092, space is full of dangerous floating garbage like discarded satellites and deserted spaceships. The crew of a space junk collector ship called The Victory discovers a humanoid robot that’s known to be a weapon of mass destruction. They get involved in a risky business deal and travel through space looking for garbage they can make money off of while also competing with rival junk collectors."
-    }
-  ],
-  "favoriteMovies": [
-    {
-      "id": 1,
-      "userId": 1,
       "apiMovieId": 464052,
       "poster_path": "/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
       "title": "Wonder Woman 1984",
@@ -68,10 +48,60 @@
     {
       "id": 2,
       "userId": 1,
-      "apiMovieId": 458220,
-      "poster_path": "/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg",
-      "title": "Palmer",
-      "overview": "After 12 years in prison, former high school football star Eddie Palmer returns home to put his life back together—and forms an unlikely bond with Sam, an outcast boy from a troubled home. But Eddie's past threatens to ruin his new life and family."
+      "apiMovieId": 621876,
+      "poster_path": "/7yyF1HvQutUyO4GupVCpB9anx14.jpg",
+      "title": "Flora & Ulysses",
+      "overview": "When Flora rescues a squirrel she names Ulysses, she is amazed to discover he possesses unique superhero powers, which take them on an adventure of humorous complications that ultimately change Flora's life--and her outlook--forever."
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "apiMovieId": 614409,
+      "poster_path": "/zdkJs9j6yKo9di0kjtctM01fSMv.jpg",
+      "title": "To All the Boys: Always and Forever",
+      "overview": "Senior year of high school takes center stage as Lara Jean returns from a family trip to Korea and considers her college plans — with and without Peter."
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "apiMovieId": 613911,
+      "poster_path": "/b7BllsQkD6nTkAdtd28UVCmKqVi.jpg",
+      "title": "Bliss",
+      "overview": "A mind-bending love story following Greg who, after recently being divorced and then fired, meets the mysterious Isabel, a woman living on the streets and convinced that the polluted, broken world around them is just a computer simulation. Doubtful at first, Greg eventually discovers there may be some truth to Isabel’s wild conspiracy."
+    }
+  ],
+  "favoriteMovies": [
+    {
+      "id": 1,
+      "userId": 2,
+      "apiMovieId": 458576,
+      "poster_path": "/1UCOF11QCw8kcqvce8LKOO6pimh.jpg",
+      "title": "Monster Hunter",
+      "overview": "A portal transports Lt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "apiMovieId": 601666,
+      "poster_path": "/gKnhEsjNefpKnUdAkn7INzIFLSu.jpg",
+      "title": "I Care a Lot",
+      "overview": "A court-appointed legal guardian defrauds her older clients and traps them under her care. But her latest mark comes with some unexpected baggage."
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "apiMovieId": 583406,
+      "poster_path": "/iIgr75GoqFxe1X5Wz9siOODGe9u.jpg",
+      "title": "Judas and the Black Messiah",
+      "overview": "Bill O'Neal infiltrates the Black Panthers per FBI Agent Mitchell and J. Edgar Hoover. As Black Panther Chairman Fred Hampton ascends, falling for a fellow revolutionary en route, a battle wages for O’Neal’s soul."
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "apiMovieId": 602269,
+      "poster_path": "/c7VlGCCgM9GZivKSzBgzuOVxQn7.jpg",
+      "title": "The Little Things",
+      "overview": "Deputy Sheriff Joe \"Deke\" Deacon joins forces with Sgt. Jim Baxter to search for a serial killer who's terrorizing Los Angeles. As they track the culprit, Baxter is unaware that the investigation is dredging up echoes of Deke's past, uncovering disturbing secrets that could threaten more than his case."
     }
   ]
 }

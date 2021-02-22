@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .movieDetails__poster__title__overview {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.397);
-  height: 600px;
+  background-color: rgba(165, 162, 162, 0.397);
+  height: 625px;
+  box-shadow: 4px 12px 30px #585858;
 }
 
 .movieDetails__poster {
@@ -10,7 +13,7 @@
   width: 400px;
   height: 550px;
   border-radius: 10px;
-  box-shadow: 8px 10px 20px #585858;
+  box-shadow: 10px 12px 25px #ff0000;
 }
 
 .movieDetails__title__overview__save {
@@ -22,12 +25,13 @@
   line-height: 30px;
   font-size: 18px;
   font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: white;
 }
 
 .movieDetails__title {
   text-align: center;
   margin-bottom: 0;
-  
+  font-family: 'Oswald', sans-serif;
 }
 
 .movieDetails__release_date {
